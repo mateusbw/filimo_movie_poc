@@ -1,0 +1,90 @@
+@import './variables.scss';
+@import './reset.scss';
+@import './fonts.scss';
+
+body{
+    font-family: $primary-font, sans-serif;
+}
+
+.content{
+   width: 65%;
+   margin: 4rem auto;
+   flex: 1;
+}
+strong{ font-weight: 600;}
+.heading{
+  color: $color-white;
+  font-size: 2rem;
+  line-height: 3rem;
+  position: relative;
+  display: inline;
+  margin-left: 50px;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    width: 35px;
+    height: 2px;
+    background-color: $color-white;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 35px;
+    height: 2px;
+    background-color: $color-white;
+    right: -50px;
+  }
+
+  &--small{
+    @extend .heading;
+    font-size: 1.3rem;
+  } 
+
+}
+.pill{
+  background-color: $color-white-transparent;
+  color: white;
+  padding: $space-md;
+  border-radius: 10px;
+  margin-right: $space-md;
+  min-width: 90px;
+  text-align: center;
+}
+.button{
+  padding: $space-md;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  min-width: 100px;
+  @each $color-name, $color in $colors {
+    &--#{$color-name}{
+      @extend .button;
+      background-color: $color;
+      transition: background-color .25s ease-in-out;
+      &:hover{
+        background-color: darken($color, 20%);
+      }
+    }
+  }
+  &--icon{
+    display: flex;
+    align-items: center;
+  }
+}
+.input{
+  background-color: $color-white-transparent;
+  color: $color-white;
+  border: none;
+  border-radius: 10px;
+  padding: $space-lg;
+  &::placeholder{
+    color: $color-gray;
+  }
+}
+
+.icon{
+  padding: 0 $space-md;
+}

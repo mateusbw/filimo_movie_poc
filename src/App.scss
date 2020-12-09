@@ -1,0 +1,8 @@
+@import './scss/variables';
+
+.app{
+    background-image: linear-gradient($color-dark-blue, $color-yellowish-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

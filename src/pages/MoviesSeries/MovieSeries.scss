@@ -1,0 +1,23 @@
+@import "../../scss/variables";
+.search-container{
+    display: flex;
+    margin: $space-xl 0;
+    &__input{
+        flex: 1;
+        border: 1px solid $color-white-transparent;
+        border-radius: 8px 0 0 8px;
+        padding: $space-sm $space-lg;
+        color: $color-white;
+        background-color: $color-white-transparent;
+    }
+    &__button{
+        border-radius: 0px 8px 8px 0px;
+        background-color: $color-white-transparent;
+        color: white;
+        padding: 0 $space-lg;
+        border: 1px solid $color-white-transparent;
+        &:hover{
+            background-color: darken($color-white-transparent, 20%);
+        }
+    }
+}

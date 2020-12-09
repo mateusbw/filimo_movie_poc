@@ -1,0 +1,8 @@
+@import "../../scss/variables";
+
+.title-list{
+    margin-top: $space-xl;
+    &__item{
+        border-bottom: 1px solid $color-white-transparent;
+    }
+}

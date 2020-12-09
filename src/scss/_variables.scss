@@ -1,0 +1,22 @@
+// COLORS
+$color-yellow: #FCC537;
+$color-dark-blue: #0B0E1E;
+$color-white: #FFFFFF;
+$color-gray: #B8B8B8;
+$color-yellowish-gray: #47402F;
+$color-white-transparent: #ffffff27;
+
+$colors: (
+    "yellow": $color-yellow,
+    "dark-blue": $color-dark-blue,
+    "white": $color-white,
+    "gray": $color-gray,
+    "yellowish-gray": $color-yellowish-gray,
+    "white-transparent": $color-white-transparent,
+);
+
+// SPACING
+$space-sm: .5rem;
+$space-md: .75rem;
+$space-lg: 1rem;
+$space-xl: 2rem;

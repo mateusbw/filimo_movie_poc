@@ -1,0 +1,44 @@
+@import '../../scss/variables';
+
+.navbar{
+    padding: $space-sm $space-xl;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__menu-list{
+        display: flex;
+        &__item{
+            color: $color-white;
+            margin: 0 $space-xl;
+            position: relative;
+            text-decoration: none;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                width: 105%;
+                right: -2.5%;
+                height: 1px;
+                background-color: $color-white;
+                transition: transform .25s ease-in-out;
+                transform: scale(0, 1);
+            }
+            &--active, &:hover{
+                &::before{
+                    
+                    transform: scale(1, 1);
+                }
+            }
+        }
+    }
+
+    &__profile-img{
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+    }
+
+    img{
+        z-index: 1;
+    }
+}
